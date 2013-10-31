@@ -212,6 +212,7 @@ static BOOL HaveFileStringsChanged(NSString *oldFile, NSString *newFile) {
   NSDateFormatter *formatter =
     [[[NSDateFormatter alloc] initWithDateFormat:@"%Y"
                             allowNaturalLanguage:NO] autorelease];
+[formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
   [formatter setLocale:enUSLocale];
   NSString *yearStr = [formatter stringFromDate:[NSDate date]];
 

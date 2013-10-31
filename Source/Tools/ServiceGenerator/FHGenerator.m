@@ -944,6 +944,7 @@ static NSArray *DictionaryObjectsSortedByKeys(NSDictionary *dict) {
   NSLocale *enUSLocale = [[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease];
   NSDateFormatter *formatter = [[[NSDateFormatter alloc] initWithDateFormat:@"%Y"
                                                        allowNaturalLanguage:NO] autorelease];
+[formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
   [formatter setLocale:enUSLocale];
   NSString *yearStr = [formatter stringFromDate:[NSDate date]];
 
